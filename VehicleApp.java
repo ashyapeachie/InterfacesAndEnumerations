@@ -1,7 +1,7 @@
 /*
- * Filename:
- * Author:
- * Description:
+ * Filename: VehicleApp.java
+ * Author: Ashya
+ * Description: the main application file that runs the program
  */
 
  import java.util.Scanner;
