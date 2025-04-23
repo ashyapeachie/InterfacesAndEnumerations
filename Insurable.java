@@ -5,6 +5,6 @@
  */
 
 /* defined interface */
-interface Insurable {
+public interface Insurable {
     double getInsuranceCost();
 }

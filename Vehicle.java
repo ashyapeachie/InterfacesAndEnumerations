@@ -4,7 +4,7 @@
  * Description: defines a base class for all vehicle types
  */
 
-public class Vehicle {
+abstract public class Vehicle {
     String make;
     String model;
     int year;
@@ -17,9 +17,9 @@ public class Vehicle {
     // reinstating 
     public void displayInfo() {
         System.out.println("Vehicle Info: ");
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("Make: " + make);
+        System.out.println("Modle: " + model);
+        System.out.println("Year: " + year);
         System.out.println();
     }
 }

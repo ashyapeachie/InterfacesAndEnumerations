@@ -5,6 +5,24 @@
 */ 
 
 /* derived car class */
-class Car {
+public class Car extends Vehicle implements Insurable {
+    private int numberOfDoors;
+    // detaik specific to cars
+    
+    public Car(String make, String model, int year, int numberOfDoors) {
+        super(make, model, year);
+        this.numberOfDoors = numberOfDoors;
+    }
 
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println();
+        System.out.println();
+    }
+
+    @Override 
+    public double getInsuranceCost() {
+        return 500 + (numberOfDoors * 100);
+    }
 }
