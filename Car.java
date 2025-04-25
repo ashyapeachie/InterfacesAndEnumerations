@@ -10,15 +10,15 @@ public class Car extends Vehicle implements Insurable {
     // detaik specific to cars
     
     public Car(String make, String model, int year, int numberOfDoors) {
-        super(make, model, year);
+        super(make, model, year, VehicleType.CAR);
         this.numberOfDoors = numberOfDoors;
     }
 
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println();
-        System.out.println();
+        System.out.println("Number of doors: " + numberOfDoors);
+        System.out.println("Insurance cost: $" + getInsuranceCost());
     }
 
     @Override 

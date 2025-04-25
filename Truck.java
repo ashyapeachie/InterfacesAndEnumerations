@@ -6,24 +6,24 @@
 
 /* derived truck class */
 public class Truck extends Vehicle implements Insurable {
-    private double payLoadCapacity;
+    private double payloadCapacity;
 
     public Truck(String make, String model, int year, double payLoadCapacity) {
-        super(make, model, year);
-        this.payLoadCapacity = payLoadCapacity;
+        super(make, model, year, VehicleType.TRUCK);
+        this.payloadCapacity = payLoadCapacity;
     }
 
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println();
-        System.out.println();
+        System.out.println("Payload capacity: " + payloadCapacity + "tons");
+        System.out.println("Insurance cost: $" + getInsuranceCost());
     }
     // info is printed for the user to see
 
     @Override
     public double getInsuranceCost() {
-        return 1000 + (payLoadCapacity * 200);
+        return 1000 + (payloadCapacity * 200);
     }
     // math is done and printed for the user
 }
